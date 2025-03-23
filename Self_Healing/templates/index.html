@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Self-Healing Security Framework</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f5f5f5; margin: 20px; }
+        .container { width: 50%; margin: 0 auto; padding: 20px; background-color: #fff; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        h2 { text-align: center; }
+        label, input, select { width: 100%; margin-top: 10px; }
+        button { width: 100%; padding: 10px; margin-top: 20px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer; }
+        button:hover { background-color: #45a049; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>AI-Powered Self-Healing Security Framework</h2>
+
+    <h3>Threat Prediction</h3>
+    <label for="features">Enter Features (comma-separated):</label>
+    <input type="text" id="features" placeholder="e.g., 0.1, 1, 0, 0.5">
+    <button onclick="predictThreat()">Predict Threat</button>
+    <p id="predictResult"></p>
+
+    <h3>Response Mechanism</h3>
+    <label for="threatType">Select Threat Type:</label>
+    <select id="threatType">
+        <option value="DDoS">DDoS</option>
+        <option value="Malware">Malware</option>
+        <option value="Recon">Recon</option>
+    </select>
+    <button onclick="triggerResponse()">Trigger Response</button>
+    <p id="responseResult"></p>
+
+    <h3>Self-Healing and Rollback</h3>
+    <label for="deviceId">Enter Device ID:</label>
+    <input type="text" id="deviceId" placeholder="e.g., device123">
+    <button onclick="triggerRecovery()">Rollback & Recover</button>
+    <p id="recoverResult"></p>
+</div>
+
+<script>
+    async function predictThreat() {
+        const features = document.getElementById('features').value.split(',').map(Number);
+        const response = await fetch('/predict', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ features })
+        });
+        const result = await response.json();
+        document.getElementById('predictResult').innerText = `Prediction: ${result.prediction}, Risk: ${result.risk_score}`;
+    }
+
+    async function triggerResponse() {
+        const threat_type = document.getElementById('threatType').value;
+        const response = await fetch('/respond', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ threat_type })
+        });
+        const result = await response.json();
+        document.getElementById('responseResult').innerText = result.action;
+    }
+
+    async function triggerRecovery() {
+        const device_id = document.getElementById('deviceId').value;
+        const response = await fetch('/recover', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ device_id })
+        });
+        const result = await response.json();
+        document.getElementById('recoverResult').innerText = result.rollback_status;
+    }
+</script>
+
+</body>
+</html>
