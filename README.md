@@ -1,8 +1,8 @@
 ## AI-Powered Intrusion Detection & Self-Healing Security Framework
 
 ## Overview
-## Team Name: **BLAZE01**
 
+### Team Name: **BLAZE01**
 ### Members:
 - Suryanshi Chauhan  
 - Priyanshu Gupta
