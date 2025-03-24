@@ -1,4 +1,4 @@
-## AI-Powered Intrusion Detection & Self-Healing Security Framework
+
 
 
 
@@ -6,6 +6,8 @@
 ### Members:
 - Suryanshi Chauhan(suryanshi.chauhan.ug22@nsut.ac.in)  
 - Priyanshu Gupta(priyanshu.gupta.062004@gmail.com)
+
+## AI-Powered Intrusion Detection & Self-Healing Security Framework
 
 ## Overview
 Cyber threats are evolving rapidly, making traditional security solutions insufficient. This project introduces an AI-powered Intrusion Detection System (IDS) combined with a Self-Healing Security Framework. The system leverages deep learning, reinforcement learning, and automation to detect threats in real-time, mitigate attacks, and recover systems autonomously.
