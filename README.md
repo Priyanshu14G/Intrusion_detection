@@ -1,12 +1,13 @@
 ## AI-Powered Intrusion Detection & Self-Healing Security Framework
 
-## Overview
 
-### Team Name: **BLAZE01**
+
+## Team Name: **BLAZE01**
 ### Members:
 - Suryanshi Chauhan  
 - Priyanshu Gupta
 
+## Overview
 Cyber threats are evolving rapidly, making traditional security solutions insufficient. This project introduces an AI-powered Intrusion Detection System (IDS) combined with a Self-Healing Security Framework. The system leverages deep learning, reinforcement learning, and automation to detect threats in real-time, mitigate attacks, and recover systems autonomously.
 
 Project Video: https://www.youtube.com/watch?v=OFESgK0zybQ
